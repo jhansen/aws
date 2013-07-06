@@ -22,7 +22,7 @@ import (
 	"bytes"
 	"flag"
 	"fmt"
-	"github.com/jacobsa/aws/s3"
+	"github.com/jhansen/aws/s3"
 	"log"
 	"math/rand"
 	"sync/atomic"

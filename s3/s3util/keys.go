@@ -17,7 +17,7 @@ package s3util
 
 import (
 	"fmt"
-	"github.com/jacobsa/aws/s3"
+	"github.com/jhansen/aws/s3"
 )
 
 // List all keys currently contained by the bucket.

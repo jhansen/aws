@@ -17,7 +17,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jacobsa/aws/s3"
+	"github.com/jhansen/aws/s3"
 	. "github.com/jacobsa/oglematchers"
 	. "github.com/jacobsa/ogletest"
 	"strings"

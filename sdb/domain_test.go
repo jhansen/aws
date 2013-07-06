@@ -16,7 +16,7 @@
 package sdb
 
 import (
-	"github.com/jacobsa/aws/sdb/conn"
+	"github.com/jhansen/aws/sdb/conn"
 	. "github.com/jacobsa/ogletest"
 )
 

@@ -17,8 +17,8 @@ package s3util_test
 
 import (
 	"errors"
-	"github.com/jacobsa/aws/s3/mock"
-	"github.com/jacobsa/aws/s3/s3util"
+	"github.com/jhansen/aws/s3/mock"
+	"github.com/jhansen/aws/s3/s3util"
 	. "github.com/jacobsa/oglematchers"
 	"github.com/jacobsa/oglemock"
 	. "github.com/jacobsa/ogletest"

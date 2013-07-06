@@ -21,7 +21,7 @@ import (
 	"crypto/sha1"
 	"encoding/base64"
 	"fmt"
-	"github.com/jacobsa/aws"
+	"github.com/jhansen/aws"
 )
 
 type Signer interface {

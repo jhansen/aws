@@ -8,8 +8,8 @@ package mock_auth
 
 import (
 	fmt "fmt"
-	auth "github.com/jacobsa/aws/s3/auth"
-	http "github.com/jacobsa/aws/s3/http"
+	auth "github.com/jhansen/aws/s3/auth"
+	http "github.com/jhansen/aws/s3/http"
 	oglemock "github.com/jacobsa/oglemock"
 	runtime "runtime"
 	unsafe "unsafe"

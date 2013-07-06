@@ -21,7 +21,7 @@ import (
 	"crypto/sha1"
 	"encoding/base64"
 	"errors"
-	"github.com/jacobsa/aws"
+	"github.com/jhansen/aws"
 	. "github.com/jacobsa/oglematchers"
 	. "github.com/jacobsa/ogletest"
 	"testing"

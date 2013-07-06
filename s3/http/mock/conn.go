@@ -8,7 +8,7 @@ package mock_http
 
 import (
 	fmt "fmt"
-	http "github.com/jacobsa/aws/s3/http"
+	http "github.com/jhansen/aws/s3/http"
 	oglemock "github.com/jacobsa/oglemock"
 	runtime "runtime"
 	unsafe "unsafe"

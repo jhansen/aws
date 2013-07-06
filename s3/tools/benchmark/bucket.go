@@ -18,8 +18,8 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/jacobsa/aws"
-	"github.com/jacobsa/aws/s3"
+	"github.com/jhansen/aws"
+	"github.com/jhansen/aws/s3"
 	"github.com/jacobsa/util/password"
 	"log"
 	"sync"

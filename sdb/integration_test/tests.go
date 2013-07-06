@@ -17,7 +17,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/jacobsa/aws/sdb"
+	"github.com/jhansen/aws/sdb"
 	. "github.com/jacobsa/oglematchers"
 	. "github.com/jacobsa/ogletest"
 	"math/rand"

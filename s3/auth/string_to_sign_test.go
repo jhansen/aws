@@ -16,7 +16,7 @@
 package auth
 
 import (
-	"github.com/jacobsa/aws/s3/http"
+	"github.com/jhansen/aws/s3/http"
 	. "github.com/jacobsa/oglematchers"
 	. "github.com/jacobsa/ogletest"
 	"testing"

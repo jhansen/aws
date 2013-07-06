@@ -21,8 +21,8 @@ import (
 	"crypto/sha1"
 	"encoding/base64"
 	"fmt"
-	"github.com/jacobsa/aws"
-	"github.com/jacobsa/aws/s3/http"
+	"github.com/jhansen/aws"
+	"github.com/jhansen/aws/s3/http"
 )
 
 // A Signer knows how to create signatures suitable for inclusion in an HTTP

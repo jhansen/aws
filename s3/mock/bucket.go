@@ -8,7 +8,7 @@ package mock_s3
 
 import (
 	fmt "fmt"
-	s3 "github.com/jacobsa/aws/s3"
+	s3 "github.com/jhansen/aws/s3"
 	oglemock "github.com/jacobsa/oglemock"
 	runtime "runtime"
 	unsafe "unsafe"

@@ -17,9 +17,9 @@ package conn_test
 
 import (
 	"errors"
-	"github.com/jacobsa/aws"
-	"github.com/jacobsa/aws/sdb/conn"
-	"github.com/jacobsa/aws/sdb/conn/mock"
+	"github.com/jhansen/aws"
+	"github.com/jhansen/aws/sdb/conn"
+	"github.com/jhansen/aws/sdb/conn/mock"
 	. "github.com/jacobsa/oglematchers"
 	"github.com/jacobsa/oglemock"
 	. "github.com/jacobsa/ogletest"

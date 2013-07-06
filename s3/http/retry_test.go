@@ -17,8 +17,8 @@ package http_test
 
 import (
 	"errors"
-	"github.com/jacobsa/aws/s3/http"
-	"github.com/jacobsa/aws/s3/http/mock"
+	"github.com/jhansen/aws/s3/http"
+	"github.com/jhansen/aws/s3/http/mock"
 	. "github.com/jacobsa/oglematchers"
 	"github.com/jacobsa/oglemock"
 	. "github.com/jacobsa/ogletest"

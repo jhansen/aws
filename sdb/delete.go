@@ -17,7 +17,7 @@ package sdb
 
 import (
 	"fmt"
-	"github.com/jacobsa/aws/sdb/conn"
+	"github.com/jhansen/aws/sdb/conn"
 	"sort"
 )
 

@@ -18,7 +18,7 @@ package sdb
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/jacobsa/aws/sdb/conn"
+	"github.com/jhansen/aws/sdb/conn"
 )
 
 type getAttributesResult struct {

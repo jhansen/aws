@@ -28,7 +28,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/jacobsa/aws"
+	"github.com/jhansen/aws"
 	"github.com/jacobsa/ogletest"
 	"os"
 	"regexp"

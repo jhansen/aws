@@ -17,8 +17,8 @@ package conn
 
 import (
 	"fmt"
-	"github.com/jacobsa/aws"
-	"github.com/jacobsa/aws/time"
+	"github.com/jhansen/aws"
+	"github.com/jhansen/aws/time"
 )
 
 const (

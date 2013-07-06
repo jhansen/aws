@@ -16,7 +16,7 @@
 package http_test
 
 import (
-	"github.com/jacobsa/aws/s3/http"
+	"github.com/jhansen/aws/s3/http"
 	. "github.com/jacobsa/oglematchers"
 	. "github.com/jacobsa/ogletest"
 	sys_http "net/http"

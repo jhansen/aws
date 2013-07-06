@@ -18,7 +18,7 @@ package auth
 import (
 	"errors"
 	"fmt"
-	"github.com/jacobsa/aws/s3/http"
+	"github.com/jhansen/aws/s3/http"
 	"net/url"
 )
 
