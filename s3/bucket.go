@@ -71,6 +71,7 @@ type Bucket interface {
 	// prevKey must be a valid key, with the sole exception that it is allowed to
 	// be the empty string.
 	ListKeys(prevKey string) (keys []string, err error)
+	ListObjects(prevKey string) (keys []BucketObject, err error)
 }
 
 // OpenBucket returns a Bucket tied to a given name in a given region. You must
@@ -312,16 +313,18 @@ func (b *bucket) DeleteObject(key string) error {
 // ListKeys
 ////////////////////////////////////////////////////////////////////////
 
-type bucketContents struct {
-	Key string
+type BucketObject struct {
+	Key          string
+	LastModified sys_time.Time
+	Size         uint64
 }
 
 type listBucketResult struct {
 	XMLName  xml.Name
-	Contents []bucketContents
+	Contents []BucketObject
 }
 
-func (b *bucket) ListKeys(prevKey string) (keys []string, err error) {
+func (b *bucket) listReq(prevKey string) (result *listBucketResult, err error) {
 	// Make sure the previous key is empty or valid.
 	if err := validateKey(prevKey); err != nil && prevKey != "" {
 		return nil, err
@@ -361,7 +364,7 @@ func (b *bucket) ListKeys(prevKey string) (keys []string, err error) {
 	}
 
 	// Attempt to parse the body.
-	result := listBucketResult{}
+	//result := listBucketResult{}
 	if err := xml.Unmarshal(httpResp.Body, &result); err != nil {
 		return nil, fmt.Errorf(
 			"Invalid data from server (%s): %s",
@@ -375,10 +378,28 @@ func (b *bucket) ListKeys(prevKey string) (keys []string, err error) {
 		return nil, fmt.Errorf("Invalid data from server: %s", httpResp.Body)
 	}
 
+	return result, nil
+}
+
+func (b *bucket) ListKeys(prevKey string) (keys []string, err error) {
+	result, err := b.listReq(prevKey)
+	if err != nil {
+		return nil, err
+	}
+
 	keys = make([]string, len(result.Contents))
 	for i, elem := range result.Contents {
 		keys[i] = elem.Key
 	}
 
 	return keys, nil
+}
+
+func (b *bucket) ListObjects(prevKey string) (keys []BucketObject, err error) {
+	result, err := b.listReq(prevKey)
+	if err != nil {
+		return nil, err
+	}
+
+	return result.Contents, nil
 }
